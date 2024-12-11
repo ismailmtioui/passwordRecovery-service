@@ -24,7 +24,7 @@ public class PassengerCredentialService {
 
     // Fetch all passenger credentials from external service
     public List<PassengerCredentialsDTO> getAllPassengerCredentialsFromAPI() {
-        String url = "http://localhost:8081/api/reservations/passenger-credentials";
+        String url = "http://localhost:9093/users";
         PassengerCredentialsDTO[] response = restTemplate.getForObject(url, PassengerCredentialsDTO[].class);
         return List.of(response);
     }
